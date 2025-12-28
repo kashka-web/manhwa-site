@@ -1,77 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Manhwa Library</title>
-
-<style>
-body{
-  margin:0;
-  background:#0c0c0c;
-  color:white;
-  font-family:system-ui, sans-serif;
-}
-
-header{
-  text-align:center;
-  padding:16px;
-  font-size:20px;
-  font-weight:600;
-}
-
-.container{
-  padding:14px;
-}
-
-.card{
-  position:relative;
-  margin-bottom:16px;
-  border-radius:14px;
-  overflow:hidden;
-}
-
-.card img{
-  width:100%;
-  display:block;
-}
-
-.card-title{
-  position:absolute;
-  bottom:0;
-  left:0;
-  right:0;
-  padding:12px;
-  font-size:18px;
-  background:linear-gradient(to top, rgba(0,0,0,.85), transparent);
-}
-
-a{
-  text-decoration:none;
-  color:white;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manhwa Library</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0f0f0f;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      text-align: center;
+      padding: 15px;
+    }
+    .series {
+      display: flex;
+      gap: 12px;
+      padding: 12px;
+    }
+    .card {
+      width: 150px;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .card p {
+      text-align: center;
+      margin: 6px 0 0;
+      font-size: 14px;
+    }
+  </style>
 </head>
-
 <body>
 
-<header>📚 Manhwa Library</header>
+<h1>📚 Manhwa Library</h1>
 
-<div class="container">
-
-<a href="series.html?name=series1">
+<div class="series">
   <div class="card">
-    <img src="assets/covers/series1.jpg">
-    <div class="card-title">🔥 Series One</div>
+    <img src="assets/covers/series1.jpg" alt="Series One">
+    <p>Series One</p>
   </div>
-</a>
 
-<a href="series.html?name=series2">
   <div class="card">
-    <img src="assets/covers/series2.jpg">
-    <div class="card-title">⚔️ Series Two</div>
+    <img src="assets/covers/series2.jpg" alt="Series Two">
+    <p>Series Two</p>
   </div>
-</a>
-
 </div>
 
 </body>
