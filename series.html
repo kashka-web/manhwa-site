@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapters</title>
+<style>
+body {background:#0c0c0c;color:white;font-family:sans-serif;}
+a {display:block;padding:15px;border-bottom:1px solid #222;color:white;text-decoration:none;}
+</style>
+</head>
+<body>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const series = params.get("name");
+
+document.write("<h2>"+series+"</h2>");
+
+for(let i=1;i<=5;i++){
+  document.write(`<a href="reader.html?series=${series}&chapter=chapter${i}">Chapter ${i}</a>`);
+}
+</script>
+
+</body>
+</html>
