@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reader</title>
+<style>
+body {margin:0;background:#0c0c0c;}
+.reader {max-width:720px;margin:auto;}
+.reader img {width:100%;display:block;}
+</style>
+</head>
+<body>
+
+<div class="reader" id="reader"></div>
+
+<script>
+const p = new URLSearchParams(window.location.search);
+const series = p.get("series");
+const chapter = p.get("chapter");
+
+for(let i=1;i<=50;i++){
+  let img = document.createElement("img");
+  img.src = `content/${series}/${chapter}/${i}.jpg`;
+  img.loading = "lazy";
+  img.onerror = () => img.remove();
+  document.getElementById("reader").appendChild(img);
+}
+</script>
+
+</body>
+</html>
